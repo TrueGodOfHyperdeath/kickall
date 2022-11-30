@@ -16,7 +16,7 @@ class KickAllMod(loader.Module):
 			silent = True
 			await message.delete()
 		else: await message.edit('✝️Молитесь за чат😌')
-		users = await message.client.get_participants(message.chat_id,aggressive=True)
+		users = await message.client.get_participants(message.chat_id)
 		count = 0
 		for user in users:
 			try:
