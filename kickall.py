@@ -20,7 +20,7 @@ class KickAllMod(loader.Module):
 		count = 0
 		for user in users:
 			try:
-				if user.id != message.from_id:
+				if user.id != message.peer_id.user_id:
 					await message.client.kick_participant(message.chat_id, user.id)
 					count += 1
 			except: pass
